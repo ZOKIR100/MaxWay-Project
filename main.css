@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* .background{
+    background-image: url("images/Rectangle.png");
+    background-size: 100%;
+    width: 50%;
+    height: 100vh;
+    background-repeat: no-repeat;
+} */
+.section{
+    width: 100%;
+}
+.section .container{
+    max-width: 1180px;
+    margin: 0 auto;
+}
+.section .container .maxway{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.section .container .maxway .links{
+    display: flex;
+    gap: 40px;
+}
+.section .container .maxway .links .link{
+    text-decoration: none;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #222124;
+    position: relative;
+}
+.section .container .maxway .links .link::after{
+    content: "";
+    width: 0%;
+    height: 1.5px;
+    background-color: #737373;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    transition: .3s linear;
+}
+.section .container .maxway .links .link:hover::after{
+    width: 100%;
+}
+
+.section .container .maxway .contact{
+   display: flex;
+   align-items: center;
+   padding: 20px 30px;
+}
+.section .container .maxway .contact img{
+    width: 24px;
+    height: 24px;
+}
+.section .container .maxway .contact .tel{
+    color: #FFFFFF;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 0px;
+    margin-left: 10px;
+    text-decoration: none;
+    color: #800A7A;
+}
+.section .container .maxway .contact .tel_{
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 100%;
+    letter-spacing: 0px;
+    margin-left: 10px;
+    text-decoration: none;
+}
+.section .container .maxway .korzinka{
+    margin-left: 80px;
+}
+.section .container .maxway .korzinka_{
+     font-family: "Inter", sans-serif;
+     font-weight: 700;
+     font-size: 24px;
+     line-height: 100%;
+     letter-spacing: 0px;
+     color: #FFFFFF;
+     text-decoration: none;
+      color: #800A7A;
+    
+}
+.section .container .maxway .korzinka .korzina{
+     font-family: "Inter", sans-serif;
+     font-weight: 400;
+     font-size: 12px;
+     line-height: 100%;
+     letter-spacing: 0px;
+     color: #FFFFFF;
+     margin-left: 25px;
+     text-decoration: none;
+      color: #800A7A;
+}
+.taom{
+    width: 100%;
+}
+.taom .container{
+    max-width: 1180px;
+    margin: 0 auto;
+    display: flex;
+}
+.taom .container .taste{
+    width: 100%;
+    display: flex;
+}
+.taom .container .taste .left h1{
+      font-family: "Inter", sans-serif;
+      font-weight: 900;
+      font-size: 80px;
+      line-height: 85px;
+      letter-spacing: 0px;
+      color: #222124;
+}
+.taom .container .taste .left p{
+     font-family: "Inter", sans-serif;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 32px;
+      color: #222124;
+}
+.taom .container .taste .left .images{
+    display: flex;
+    gap: 30px;
+    margin-top: 50px;
+    cursor: pointer;
+}
+.taom .container .taste .right img{
+    width: 800px;
+}
+.linkss{
+    width: 100%;
+}
+.linkss .container{
+    max-width: 1180px;
+    margin: 0 auto;
+    display: flex;
+    gap: 50px;
+    padding: 20px 0px;
+}
+.linkss .container .btn{
+    border-radius: 20px;
+    padding: 0px 10px;
+    background-color: #F1B301;
+    border: none;
+    cursor: pointer;
+}
+.linkss .container button{
+    border-radius: 20px;
+    padding: 0px 10px;
+    background-color: #F1B301;
+    border: none;
+    cursor: pointer;
+    transition: .3s linear;
+
+}
+.linkss .container button:hover{
+    background-color:  #85540a;;
+}
+.div{
+    border: 1px solid #979797;
+    width: 1208px;
+    height: 1px;
+    margin-left: 200px;
+    opacity: 20%;
+}
