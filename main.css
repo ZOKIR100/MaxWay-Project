@@ -4,243 +4,823 @@
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
-    font-family: "Inter", sans-serif;
+    font-family: Inter;
 }
-.container{
-    max-width: 1120px;
-    padding: 0px 15px;
+/* container style */
+.container {
+    max-width: 1200px;
+    padding: 0 22px;
     margin: 0 auto;
 }
-.header{
+/* header */
+.header {
     width: 100%;
-    height: auto;
+    height: 100vh;
     background-image: url("../images/Rectangle.png");
     background-repeat: no-repeat;
-    background-size: calc(45% - 70px/2);
+    background-size: 39%;
     background-position: right top;
 }
-.nav{
-    padding: 25px 0;
-    width: 100%;
-}
-.nav_container{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 75px;
-}
-.nav_left{
-    width: 55%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.nav_links{
-    display: flex;
-    align-items: center;
-    grid-gap: 40px;
-}
-.nav_link{
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 1;
-    letter-spacing: 0;
-    color: #222124;
+.navbar{
+    padding: 30px 0;
     position: relative;
 }
-.nav_link::after{
+.header .navbar .nav_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header .navbar .nav_container{
+    cursor: pointer;
+}
+.header .navbar .nav_container .links {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding-left: 300px;
+}
+.header .navbar .nav_container .links .link{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0px;
+    position: relative;
+    color: #222124;
+}
+.header .navbar .nav_container .links .link::after{
     content: "";
     width: 0%;
-    height: 2px;
-    background-color: #737373;
+    height: 1px;
+    background-color: #222124;
     position: absolute;
     bottom: -3px;
     left: 0;
-    transition: .4s linear;
-
+    transition: .3s ease all;
 }
-.nav_link:hover::after{
+.header .navbar .nav_container .links .link:hover::after{
     width: 100%;
 }
-.nav_right{
-    width: calc(45% - 75px);
+.header .navbar .nav_container .connection{
     display: flex;
     align-items: center;
-    gap: 30px;
+    justify-content: center;
+    gap: 40px;
 }
-.nav_contact{
+.header .navbar .nav_container .connection .title{
     display: flex;
     align-items: center;
-    gap: 10px;
+    justify-content: center;
+    gap: 16px;
+    cursor: pointer;
 }
-.nav_contact span{
-    display: block;
+.header .navbar .nav_container .connection .title p{
     font-weight: 400;
     font-size: 12px;
-    line-height: 1;
-    letter-spacing: 0;
+    line-height: 100%;
+    letter-spacing: 0px;
     color: #FFFFFF;
-    margin-bottom: 5px;
 }
-.nav_contact p{
+.header .navbar .nav_container .connection .title h2{
     font-weight: 700;
-    font-size: 22px;
-    line-height: 1;
-    letter-spacing: 0;
+    font-size: 24px;
+    line-height: 100%;
+    letter-spacing: 0px;
     color: #FFFFFF;
 }
-.line{
+.br{
     width: 1px;
     height: 43px;
     background-color: #FFFFFF;
     opacity: 40%;
 }
-.backet{
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    cursor: pointer;
-}
-.backet_image{
-    position: relative;
-}
-.badge{
-    font-weight: 600;
-    font-size: 10px;
-    line-height: 1;
-    letter-spacing: 0;
-    color: #FFFFFF;
-    position: absolute;
-    background-color: #F1B301;
-    width: 20px;
-    height: 20px;
+.header .navbar .nav_container .connection .title{
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 50%;
-    top: 30px;
-    right: 395px;
-    border: 2px solid #800A7A;
+    gap: 16px;
+    cursor: pointer;
 }
-.backet_text span{
+.header .navbar .nav_container .connection .title p{
     font-weight: 400;
     font-size: 12px;
-    line-height: 1;
-    letter-spacing: 0;
+    line-height: 100%;
+    letter-spacing: 0px;
     color: #FFFFFF;
 }
-.backet_text p{
+.header .navbar .nav_container .connection .title h2{
     font-weight: 700;
-    font-size: 22px;
-    line-height: 1;
-    letter-spacing: 0;
+    font-size: 24px;
+    line-height: 100%;
+    letter-spacing: 0px;
     color: #FFFFFF;
 }
-/* hero styles */
+/* Hero */
 .hero{
     width: 100%;
-    padding-top: 40px;
+    position: relative;
 }
-.row{
+.hero .container{
+    max-width: 1200px;
+    padding: 0 22px;
+    margin: 0 auto;
     display: flex;
-    align-items: end;
-    position: relative;
+    align-items: center;
+    justify-content: space-between;
 }
-.row_left{
-    width: 40%;
+.hero .container .left{
+    margin-top: 35px;
 }
-.row_right{
-    position: absolute;
-    top: 0;
-    right: 0;
-    flex-grow: 1;
-    overflow: hidden;
-    max-height: auto;
-    position: relative;
-    z-index: 1;
-}
-.row_right img{
-    width: 110%;
-    object-position: -30px -20px;
-    object-fit: cover;
-    vertical-align: middle;
-}
-.title{
+.hero .container .left h2{
     font-weight: 900;
-    font-size: 70px;
-    line-height: 75px;
-    letter-spacing: 0;
+    font-size: 80px;
+    line-height: 85px;
+    letter-spacing: 0px;
     color: #222124;
-    margin-bottom: 14px;
+    padding-bottom: 14px;
 }
-.subtitle{
+.hero .container .left p{
     font-weight: 400;
     font-size: 18px;
-    line-height: 28px;
-    letter-spacing: 0;
-    color: #222124;
-    margin-bottom: 60px;
-}
-.cards{
-    display: flex;
-    gap: 40px;
-    position: relative;
-    z-index: 2;
-}
-.card{
-    width: 300px;
-    border-radius: 10px;
-    height: 180px;
-        background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-.card_btn{
-    padding: 10px 25px;
-    border-radius: 19px;
-    background-color: #FFC85C;
-    border: none;
-    margin-top: 20px;
-    margin-left: 30px;
-}
-.card_text{
-    font-weight: 700;
-    font-size: 34px;
     line-height: 32px;
-    letter-spacing: 0;
-    color: #E76A06;
-    margin-left: 40px;
-    margin-top: 40px;
+    letter-spacing: 0px;
+    color: #222124;
+    padding-bottom: 50px;
 }
-.card:nth-child(1){
-    background-image: url("../images/41\ копия\ 22.png");
+.hero .container .left .cards{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    cursor: pointer;
 }
-.card_btn_{
-    padding: 10px 25px;
-    border-radius: 19px;
-    background-color: #53064F6F;
+.hero .container .right{
+    position: absolute;
+    margin-left: 450px;
+    margin-top: 60px;
+}
+/* bottom */
+.bottom{
+    width: 100%;
+    background-color: #FFFFFF;
+    margin-top: 80px;
+}
+.bottom .container{
+    max-width: 1200px;
+    padding: 0 22px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.bottom .container .cards button{
+    padding: 15px 26px;
+    background-color: #F1B301;
+    color: #FFFFFF;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0px;
     border: none;
-    margin-top: 20px;
-    margin-left: 17px;
+    border-radius: 27px;
+    cursor: pointer;
+    transition: all 0.3s linear;
 }
-.card_btn_ span{
+.bottom .container .cards button:hover{
+    color: #F1B301;
+    background-color: #800A7A;
+}
+.bottom .container .cards{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    border-top: 1px solid #979797;
+    padding: 40px 0;
+    cursor: pointer;
+}
+.bottom .container .cards .card{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0px;
+    color: #222124;
+    position: relative;
+}
+/* .bottom .container .cards .card::after{
+    content: "";
+    width: 0%;
+    height: 1.5px;
+    background-color: #222124;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    transition: 0.3s ease all;
+}
+.bottom .container .cards .card:hover::after{
+    width: 100%;
+} */
+.bottom .container .cards .button_2{
+    padding: 15px 44px;
+    background-color: #F5F5F5;
+    border: none;
+    border-radius: 27px;
+    display: flex;
+    gap: 15px;
+    color: #222124;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0px;
+    transition: all 0.3s linear;
+}
+.bottom .container .cards .button_2:hover{
+    background-color: #800A7A;
+    color: #F1B301;
+}
+/* Pitsa */
+.Pitsa{
+    width: 100%;
+    margin-top: 100px;
+}
+.Pitsa .container{
+    max-width: 1200px;
+    padding: 0 22px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+}
+.Pitsa .container h1{
+    font-weight: 700;
+    font-size: 52px;
+    line-height: 100%;
+    letter-spacing: 0px;
+    color: #222124;
+    margin-bottom: 30px;
+}
+.Pitsa .container .cards{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.Pitsa .container .cards .card{
+    width: 540px;
+    height: 230px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #eee;
+    border-radius: 15px;
+    padding: 15px;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    cursor: pointer;
+    gap: 40px;
+    transition: all 0.3s linear;
+}
+.Pitsa .container .cards .card:hover{
+    box-shadow: 0 4px 8px rgba(0,0,0,0.50);
+}
+.Pitsa .container .cards .card img {
+    width: 180px;
+}
+.Pitsa .container .cards .card .title h2{
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 100%;
+    letter-spacing: 0px;
+    color: #222124;
+    margin-bottom: 10px;
+}
+.Pitsa .container .cards .card .title p{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0px;
+    color: #222124;
+    margin-bottom: 24px;
+}
+.Pitsa .container .cards .card .title span{
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 100%;
+    letter-spacing: 0px;
+    color: #222124;
+    margin-right: 60px;
+}
+.Pitsa .container .cards .card .title button{
+    background: #F1B301;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    font-size: 24px;
+    transition: all 0.3s linear;
+}
+.Pitsa .container .cards .card .title button:hover {
+    background: #800A7A;
+}
+/* Burger */
+.Burger{
+    width: 100%;
+    margin-top: 100px;
+}
+.Burger .container{
+    max-width: 1200px;
+    padding: 0 22px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+}
+.Burger .container h1{
+    font-weight: 700;
+    font-size: 52px;
+    line-height: 100%;
+    letter-spacing: 0px;
+    color: #222124;
+    margin-bottom: 30px;
+}
+.Burger .container .cards{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.Burger .container .cards .card{
+    width: 540px;
+    height: 230px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #eee;
+    border-radius: 15px;
+    padding: 15px;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    cursor: pointer;
+    gap: 40px;
+    transition: all 0.3s linear;
+}
+.Burger .container .cards .card:hover{
+    box-shadow: 0 4px 8px rgba(0,0,0,0.50);
+}
+.Burger .container .cards .card img {
+    width: 180px;
+}
+.Burger .container .cards .card .title h2{
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 100%;
+    letter-spacing: 0px;
+    color: #222124;
+    margin-bottom: 10px;
+}
+.Burger .container .cards .card .title p{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0px;
+    color: #222124;
+    margin-bottom: 24px;
+}
+.Burger .container .cards .card .title span{
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 100%;
+    letter-spacing: 0px;
+    color: #222124;
+    margin-right: 60px;
+}
+.Burger .container .cards .card .title button{
+    background: #F1B301;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    font-size: 24px;
+    transition: all 0.3s linear;
+}
+.Burger .container .cards .card .title button:hover {
+    background: greenyellow;
+}
+/* Kombo */
+.Kombo{
+    width: 100%;
+    margin-top: 100px;
+}
+.Kombo .container{
+    max-width: 1200px;
+    padding: 0 22px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+}
+.Kombo .container h1{
+    font-weight: 700;
+    font-size: 52px;
+    line-height: 100%;
+    letter-spacing: 0px;
+    color: #222124;
+    margin-bottom: 30px;
+}
+.Kombo .container .cards{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.Kombo .container .cards .card{
+    width: 540px;
+    height: 230px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #eee;
+    border-radius: 15px;
+    padding: 15px;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    cursor: pointer;
+    gap: 40px;
+    transition: all 0.3s linear;
+}
+.Kombo .container .cards .card:hover{
+    box-shadow: 0 4px 8px rgba(0,0,0,0.50);
+}
+.Kombo .container .cards .card img {
+    width: 180px;
+}
+.Kombo .container .cards .card .title h2{
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 100%;
+    letter-spacing: 0px;
+    color: #222124;
+    margin-bottom: 10px;
+}
+.Kombo .container .cards .card .title p{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0px;
+    color: #222124;
+    margin-bottom: 24px;
+}
+.Kombo .container .cards .card .title span{
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 100%;
+    letter-spacing: 0px;
+    color: #222124;
+    margin-right: 60px;
+}
+.Kombo .container .cards .card .title button{
+    background: #F1B301;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    font-size: 24px;
+    transition: all 0.3s linear;
+}
+.Kombo .container .cards .card .title button:hover {
+    background: green;
+}
+/* Ichimliklar */
+.Ichimliklar{
+    width: 100%;
+    margin-top: 100px;
+}
+.Ichimliklar .container{
+    max-width: 1200px;
+    padding: 0 22px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+}
+.Ichimliklar .container h1{
+    font-weight: 700;
+    font-size: 52px;
+    line-height: 100%;
+    letter-spacing: 0px;
+    color: #222124;
+    margin-bottom: 30px;
+}
+.Ichimliklar .container .cards{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.Ichimliklar .container .cards .card{
+    width: 540px;
+    height: 230px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #eee;
+    border-radius: 15px;
+    padding: 15px;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    cursor: pointer;
+    gap: 40px;
+    transition: all 0.3s linear;
+}
+.Ichimliklar .container .cards .card:hover{
+    box-shadow: 0 4px 8px rgba(0,0,0,0.50);
+}
+.Ichimliklar .container .cards .card img {
+    width: 180px;
+}
+.Ichimliklar .container .cards .card .title h2{
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 100%;
+    letter-spacing: 0px;
+    color: #222124;
+    margin-bottom: 10px;
+}
+.Ichimliklar .container .cards .card .title p{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0px;
+    color: #222124;
+    margin-bottom: 24px;
+}
+.Ichimliklar .container .cards .card .title span{
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 100%;
+    letter-spacing: 0px;
+    color: #222124;
+    margin-right: 60px;
+}
+.Ichimliklar .container .cards .card .title button{
+    background: #F1B301;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    font-size: 24px;
+    transition: all 0.3s linear;
+}
+.Ichimliklar .container .cards .card .title button:hover {
+    background: greenyellow;
+}
+/* mobile */
+.mobile{
+    width: 100%;
+    height: 500px;
+    margin-top: 170px;
+    background-color: #800A7A;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+}
+.mobile .container{
+    max-width: 1200px;
+    padding: 0 22px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;    
+}
+.mobile .container .left{
+    margin-top: 76px;
+}
+.mobile .container .left h2{
+    font-weight: 700;
+    font-size: 52px;
+    line-height: 100%;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    margin-bottom: 63px;
+}
+.mobile .container .left .all{
+    display: flex;
+    gap: 30px;
+    cursor: pointer;
+}
+.mobile .container .left .all .Play_store{
+    width: 250px;
+    height: 80px;
+    background-color: transparent;
+    border-color: #FFFFFF4B;
+    border-radius: 46px;
+    cursor: pointer;
+    transition: all 0.5s linear;
+}
+.mobile .container .left .all .Play_store:hover{
+    background-color: black;
+    border-color: white;
+}
+.mobile .container .left .all .Play_store a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+}
+.mobile .container .left .all .Play_store span{
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 100%;
+    letter-spacing: 0px;
     color: #FFFFFF;
 }
-.card_text_{
-    color: #FC96F7;
-    font-weight: 700;
-    font-size: 34px;
-    line-height: 32px;
-    letter-spacing: 0;
+.mobile .container .left .all .App_store{
+    width: 250px;
+    height: 80px;
+    background-color: transparent;
+    border-color: #FFFFFF4B;
+    border-radius: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.5s linear;
+}
+.mobile .container .left .all .App_store:hover{
+    background-color: black;
+    border-color: white;
+}
+.mobile .container .left .all .App_store a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+}
+.mobile .container .left .all .App_store span{
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 100%;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+}
+.mobile .container .right{
+    position: absolute;
+    margin-left: 500px;
+    z-index: 2;
+}
+.mobile .container .right .right_img_title{
+    position: absolute;
+    z-index: -1;
+    margin-top: -450px;
+    margin-left: 300px;
+}
+/* Footer end */
+.footer{
+    width: 100%;
+    margin-top: 120px;
+}
+.footer .container{
+    max-width: 1200px;
+    padding: 0 22px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;  
+}
+.footer .container .left{
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    gap: 130px;
+    cursor: pointer;
+}
+.footer .container .left .cards{
+    display: flex;
+    gap: 130px;
+}
+.footer .container .left .cards .card{
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+}
+.footer .container .left .cards .card h2{
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 18px;
+    letter-spacing: 0px;
+    color: #003846;
+    margin-bottom: 25px;
+    transition: all 0.2s linear;
+}
+.footer .container .left .cards .card h2:hover{
+    color: #800A7A;
+}
+.footer .container .left .cards .card a{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 34px;
+    letter-spacing: 0px;
+    color: #222124;
+    transition: all 0.2s linear;
+}
+.footer .container .left .cards .card a:hover{
+    color: gold;
+}
+.footer .container .right{
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+.footer .container .right h2{
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 18px;
+    letter-spacing: 0px;
+    color: #222124;   
+    margin-bottom: 33px;
+    transition: all 0.2s linear;
+}
+.footer .container .right h2:hover{
+    color: #800A7A;
+}
+.footer .container .right a{
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 33px;
+    letter-spacing: 0px;
+    color: #222124;
+    margin-bottom: 13px;
+    transition: all 0.2s linear;
+}
+.footer .container .right a:hover{
+    color: aquamarine;
+}
+.footer .container .right p{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0px;
+    color: #222124;    
+}
+/* FOOTER */
+footer {
+    width: 100%;
     margin-top: 40px;
-    margin-left: 40px;
 }
-.card:nth-child(2){
-    background-image: url("images/max kvadrat menu - печать 2.png");
+footer .container{
+    max-width: 1200px;
+    padding: 0 22px;
+    margin: 0 auto;  
+    border-top: 1px solid #979797;
 }
-/* .div{
-    width: 5 0%;
-    height: 5px;
-    border: 1px;
-    color: red;
-} */
+footer .container .box{
+    display: flex;
+    align-items: start;
+    justify-content: space-between;  
+    margin-top: 27px;
+    margin-bottom: 24px;
+}
+footer .container .box h2{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0px;
+    color: #222124;
+    cursor: pointer;
+    transition: all 0.2s linear;
+}
+footer .container .box h2:hover{
+    color: aqua;
+}
+footer .container .box .icons{
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    justify-content: center;
+}
